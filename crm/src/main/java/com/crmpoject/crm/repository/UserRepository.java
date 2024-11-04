@@ -1,4 +1,4 @@
-package com.crmpoject.repository;
+package com.crmpoject.crm.repository;
 
 import java.util.List;
 

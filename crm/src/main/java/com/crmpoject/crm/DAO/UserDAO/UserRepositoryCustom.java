@@ -1,4 +1,4 @@
-package com.crmpoject.DAO.UserDAO;
+package com.crmpoject.crm.DAO.UserDAO;
 
 import java.util.List;
 
