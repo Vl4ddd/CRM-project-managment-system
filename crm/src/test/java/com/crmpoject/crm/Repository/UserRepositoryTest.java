@@ -34,4 +34,12 @@ public class UserRepositoryTest {
         Assertions.assertEquals(user.getId(), foundUser.getId());
         Assertions.assertEquals(userName, foundUser.getName());
     }
+
+    @Test
+    void createTestUser() {
+        User user = new User();
+        user.setName("Alex");
+        userRepository.save(user);
+
+    }
 }
