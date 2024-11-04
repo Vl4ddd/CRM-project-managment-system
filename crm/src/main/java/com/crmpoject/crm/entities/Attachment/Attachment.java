@@ -3,7 +3,6 @@ package com.crmpoject.crm.entities.Attachment;
 import java.util.Date;
 
 import com.crmpoject.crm.entities.Task.Task;
-import com.crmpoject.crm.entities.User.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
