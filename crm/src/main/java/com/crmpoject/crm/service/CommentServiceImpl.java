@@ -39,10 +39,11 @@ public class CommentServiceImpl implements CommentService {
 
             for (Task task : tasks) {
                 // Удаляем все комментарии, связанные с задачей
-                for (Comment comment : task.getComments()) {
-                    commentRepository.delete(comment);
-                }
+                commentRepository.deleteByTaskId(task.getId());
+                
             }
+
+            
 
             transactionManager.commit(status);
         } catch (DataAccessException ex) {
