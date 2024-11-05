@@ -20,6 +20,7 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,6 +31,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -50,7 +52,7 @@ public class User {
     private String password;
 
     @Column
-    private String privilege;
+    private List<String> roles;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Project> projects;
