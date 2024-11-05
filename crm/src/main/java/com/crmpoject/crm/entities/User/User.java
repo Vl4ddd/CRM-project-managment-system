@@ -11,6 +11,8 @@ import com.crmpoject.crm.entities.Task.Task;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -39,7 +41,7 @@ public class User {
     @Column(name = "id")
     private Long id;
 
-    @Column
+    @Column(unique = true, nullable = false)
     private String login;
 
     @Column
@@ -52,7 +54,8 @@ public class User {
     private String password;
 
     @Column
-    private List<String> roles;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Project> projects;
