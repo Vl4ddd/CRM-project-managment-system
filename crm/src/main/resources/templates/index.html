@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Главная страница</h1>
+    
+    <!-- Кнопка выхода -->
+    <form action="/logout" method="post" th:action="@{/logout}" style="display:inline;">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
